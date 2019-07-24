@@ -11,20 +11,82 @@ nav{
     justify-content: center;
 }
 
-nav div{
+nav  #hamburguer{
     width: 50px;
     height: 80%;
-    
     display: flex;
     flex-direction: column;
     align-items:  center;
     justify-content: space-around;
 }
 
-nav div span{
+nav #desktop{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-content: center;
+}
+
+nav #hamburguer span{
     width:100%;
     height:8px;
     background-color: limegreen;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
+section{
+    width:100%;
+    height: 100vh;
+    background-color: mediumblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    transform: translateX(-105%);
+    transition: 1s;
+    
+}
+
+section a{
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 16pt;
+    color: magenta;
+    font-weight: bolder;
+}
+
+.aparecerMenu{
+    transform: translateX(0) rotate(360deg);
+    background-color: blue;
+}
+
+.sumirIgualTiro{
+    transform: translateX(-70vw);
+    background-color: blue;
+}
+
+.virarX1{
+    transform: rotateZ(-45deg);
+    transform-origin: right center;
+    background-color: aquamarine;
+}
+
+.virarX2{
+    transform: rotateZ(45deg);
+    transform-origin: right center;
+    position: relative;
+    top: 8px;
+    background-color: red;
+}
+
+
+@media(min-width:768px){
+    nav #hamburguer{
+        display: none;
+    }
+    nav #desktop{
+        display:flex;
+    }
+}
